@@ -1,0 +1,83 @@
+.section {
+  position: relative;
+}
+
+.hero-background {
+  position: absolute;
+  width: 100%;
+  max-height: 800px;
+  margin-top: -35px;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-left {
+  padding-top: 200px;
+  padding-left: 220px;
+}
+
+.hero-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: 0.05em;
+  max-width: 635px;
+  margin-bottom: 40px;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.55;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.hero-button {
+  border-radius: 8px;
+  padding: 16px 32px;
+  width: 170px;
+  height: 55px;
+  background-color: var(--primary-color-yellow);
+  border: none;
+  color: var(--primary-color-white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.hero-button:hover {
+  background-color: var(--secondary-color-yellow);
+}
+
+.hero-right {
+  padding: 230px 50px 60px 0;
+}
+
+.big-paw-one {
+  position: absolute;
+}
+
+.big-paw-two {
+  position: absolute;
+}
+
+.purple-paw {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 300px;
+  left: 1000px;
+}
+
+.yellow-paw {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 550px;
+  left: 800px;
+}

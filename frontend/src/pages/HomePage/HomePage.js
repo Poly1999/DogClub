@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 
 function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Dog Club</h1>
+      <Header />
+      <Hero />
     </div>
   );
 }
