@@ -10,6 +10,7 @@ function Hero() {
       <img src={background} alt='background-hero' className='hero-background' />
       <img src={paw} alt='big-paw' className='big-paw-one' />
       <img src={paw} alt='big-paw' className='big-paw-two' />
+      <img src={pawp} alt='big-paw' className='big-paw-three' />
 
       <div className='hero-container'>
         <img src={pawp} alt='purple-paw' className='purple-paw' />

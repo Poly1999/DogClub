@@ -1,4 +1,4 @@
-.section {
+.hero {
   position: relative;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .hero-left {
-  padding-top: 200px;
+  padding-top: 100px;
   padding-left: 220px;
 }
 
@@ -55,22 +55,44 @@
 }
 
 .hero-right {
-  padding: 230px 50px 60px 0;
+  padding: 150px 50px 60px 0;
 }
 
 .big-paw-one {
   position: absolute;
+  width: 140px;
+  height: 140px;
+  top: -60px;
+  left: 950px;
+  transform: rotate(-180deg);
+  opacity: 0.1;
 }
 
 .big-paw-two {
   position: absolute;
+  width: 140px;
+  height: 140px;
+  right: 10px;
+  top: -25px;
+  transform: rotate(380deg);
+  opacity: 0.1;
+}
+
+.big-paw-three {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 70px;
+  left: -10px;
+  transform: rotate(390deg);
+  opacity: 0.1;
 }
 
 .purple-paw {
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 300px;
+  top: 200px;
   left: 1000px;
 }
 
@@ -78,6 +100,6 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 550px;
+  top: 450px;
   left: 800px;
 }
