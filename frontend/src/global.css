@@ -1,0 +1,63 @@
+:root {
+  --primary-color-white: #ffffff;
+  --primary-color-yellow: #ff9f0e;
+  --primary-color-black: #181817;
+  --secondary-color-yellow: #fcb62a;
+  --secondary-color-biege: #fffaf3;
+  --secondary-color-blue: #f1f3ff;
+  --secondary-color-grey: #839aa9;
+  --secondary-color-white: #f9f9ff;
+  --secondary-color-purple: #d9a6ff;
+
+  --font-family: 'Roboto', sans-serif;
+  --second-family: 'Rowdies', sans-serif;
+
+  --fs-56: 56px;
+  --fs-32: 32px;
+  --fs-24: 24px;
+  --fs-22: 22px;
+  --fs-18: 18px;
+  --fs-16: 16px;
+  --fs-14: 14px;
+  --fs-12: 12px;
+  --fs-8: 8px;
+
+  --shadow-1: 0px 4px 4px rgba(24, 24, 23, 0.05);
+  --shadow-2: 0px 8px 16px rgba(24, 24, 23, 0.08);
+  --shadow-3: 0px 0px 8px rgba(24, 24, 23, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--primary-color-black);
+  background-color: var(--primary-color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
