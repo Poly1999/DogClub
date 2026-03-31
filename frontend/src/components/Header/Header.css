@@ -2,11 +2,15 @@
   padding: 30px 50px;
 }
 
+.header-container {
+  width: 100%;
+}
+
 .header-nav {
   display: flex;
   justify-content: space-between;
-  gap: 115px;
   align-items: center;
+  width: 100%;
 }
 
 .header-logo {
