@@ -6,7 +6,7 @@ import cart from '../../images/cart.png';
 function Header() {
   return (
     <header className='header'>
-      <div className='header-container'>
+      <div>
         <nav className='header-nav'>
           <Link to='/' className='header-logo'>
             <img src={logo} alt='logo' />
