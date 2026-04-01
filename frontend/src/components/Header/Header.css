@@ -37,10 +37,6 @@
   color: var(--primary-color-yellow);
 }
 
-/* .header-item a.active {
-  color: var(--primary-color-yellow);
-} */
-
 .header-buttons {
   display: flex;
   gap: 25px;
