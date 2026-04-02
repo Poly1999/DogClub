@@ -4,6 +4,7 @@ import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
 import Services from '../../components/Services/Services';
 import Reviews from '../../components/Reviews/Reviews';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <About />
       <Services />
       <Reviews />
+      <ContactForm />
     </div>
   );
 }
