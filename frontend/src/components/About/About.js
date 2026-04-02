@@ -5,7 +5,7 @@ import paw from '../../images/about-paw.png';
 
 function About() {
   return (
-    <section className='about'>
+    <section className='about' id='about'>
       <div className='about-container'>
         <div className='about-left'>
           <img
@@ -26,7 +26,16 @@ function About() {
             they need. Which is why, it’s okay to use an extra hand in walking
             dogs so they are in perfect shape, mentally and physically.
           </p>
-          <button className='about-button'>Explore More</button>
+          <button
+            className='about-button'
+            onClick={() =>
+              document
+                .getElementById('services')
+                .scrollIntoView({ behavior: 'smooth' })
+            }
+          >
+            Explore More
+          </button>
         </div>
       </div>
     </section>
