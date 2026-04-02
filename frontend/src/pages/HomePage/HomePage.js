@@ -5,6 +5,7 @@ import About from '../../components/About/About';
 import Services from '../../components/Services/Services';
 import Reviews from '../../components/Reviews/Reviews';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import Footer from '../../components/Footer/Footer';
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
       <Services />
       <Reviews />
       <ContactForm />
+      <Footer />
     </div>
   );
 }
