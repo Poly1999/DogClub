@@ -2,8 +2,12 @@ import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../images/logo.png';
 import cart from '../../images/cart.png';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className='header'>
       <div>
@@ -16,22 +20,28 @@ function Header() {
               <NavLink to='/'>Less talk </NavLink>
             </li>
             <li className='header-item'>
-              <NavLink to='/nutrition'>Services category </NavLink>
+              <Link to='/nutrition'>Services category </Link>
             </li>
             <li className='header-item'>
-              <NavLink to='/#reviews'>Happy customer</NavLink>
+              <a href='#reviews'>Reviews</a>
             </li>
             <li className='header-item'>
-              <NavLink to='/#contacts'>Contact</NavLink>
+              <a href='#contacts'>Contact</a>
             </li>
           </ul>
           <div className='header-buttons'>
-            <button className='header-button-cart'>
+            <Link to='/cart' className='header-button-cart'>
               <img src={cart} alt='cart' />
+            </Link>
+            <button
+              className='header-button-contact'
+              onClick={() => setIsOpen(true)}
+            >
+              Contact us
             </button>
-            <button className='header-button-contact'>Contact us</button>
           </div>
         </nav>
+        {isOpen && <Modal onClose={() => setIsOpen(false)} />}
       </div>
     </header>
   );

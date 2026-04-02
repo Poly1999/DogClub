@@ -39,6 +39,10 @@ body {
   background-color: var(--primary-color-white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }

@@ -1,23 +1,22 @@
-import './ContactForm.css';
-import background from '../../images/contact-vector.png';
-import dogLeft from '../../images/contact-dog-left.png';
-import dogRight from '../../images/contact-dog-right.png';
+import './Modal.css';
 import name from '../../images/contact-name.png';
 import pet from '../../images/pet.png';
 import phone from '../../images/phone.png';
 import email from '../../images/email.png';
+import close from '../../images/close-icon.png';
 
-function ContactForm() {
+function Modal({ onClose }) {
   return (
-    <section className='contact' id='contacts'>
-      <img src={dogLeft} alt='dogLeft' className='dog-left' />
-      <img src={dogRight} alt='dogRight' className='dog-right' />
-      <img src={background} alt='background-contact' className='background' />
-      <div className='contact-container'>
-        <h2 className='contact-title'>
+    <div className='modal'>
+      <div className='modal-container'>
+        <button className='close-button' onClick={onClose}>
+          <img src={close} alt='close button' />
+        </button>
+        <h2 className='modal-title'>
           Our experts will take care of your friend
         </h2>
-        <p className='contact-text'>Fill out the form so we can contact you!</p>
+        <p className='modal-text'>Fill out the form so we can contact you!</p>
+
         <form className='contact-form'>
           <div className='form-input'>
             <img src={name} alt='contact-name' />
@@ -44,8 +43,8 @@ function ContactForm() {
           </label>
         </form>
       </div>
-    </section>
+    </div>
   );
 }
 
-export default ContactForm;
+export default Modal;
