@@ -1,6 +1,6 @@
 import Header from '../../components/Header/Header';
 
-function NutritionPage() {
+function CartPage() {
   return (
     <div>
       <Header />
@@ -8,4 +8,4 @@ function NutritionPage() {
   );
 }
 
-export default NutritionPage;
+export default CartPage;

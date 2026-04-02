@@ -5,7 +5,7 @@ import sindy from '../../images/reviews-sindy.png';
 
 function Reviews() {
   return (
-    <section className='reviews'>
+    <section className='reviews' id='reviews'>
       <div className='reviews-container'>
         <h2 className='reviews-title'>Happy customer</h2>
         <div className='reviews-slider'>

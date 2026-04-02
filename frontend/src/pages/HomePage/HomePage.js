@@ -14,8 +14,8 @@ function HomePage() {
       <Hero />
       <About />
       <Services />
-      <Reviews />
-      <ContactForm />
+      <Reviews id='reviews' />
+      <ContactForm id='contacts' />
       <Footer />
     </div>
   );
