@@ -21,7 +21,16 @@ function Hero() {
           <p className='hero-text'>
             Human–canine bonding is the relationship between dogs and humans
           </p>
-          <button className='hero-button'>Explore more</button>
+          <button
+            className='hero-button'
+            onClick={() =>
+              document
+                .getElementById('about')
+                .scrollIntoView({ behavior: 'smooth' })
+            }
+          >
+            Explore more
+          </button>
         </div>
         <div className='hero-right'>
           <img src={dog} alt='dog-hero' className='hero-image' />

@@ -7,7 +7,7 @@ import background from '../../images/services-vector.png';
 
 function Services() {
   return (
-    <section className='services'>
+    <section className='services' id='services'>
       <img
         src={background}
         alt='services-background'
