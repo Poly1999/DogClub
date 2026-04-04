@@ -2,6 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
+const upload = require('../middleware/upload');
+
 const {
   getAllReviews,
   createReview,
@@ -11,6 +13,6 @@ const {
 router.get('/', getAllReviews);
 
 // POST /api/reviews
-router.post('/', createReview);
+router.post('/', upload.single('image'), createReview);
 
 module.exports = router;
