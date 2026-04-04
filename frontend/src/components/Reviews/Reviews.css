@@ -19,6 +19,9 @@
   width: 344px;
   height: 456px;
   box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .reviews-img {
@@ -50,6 +53,7 @@
   align-items: center;
   gap: 40px;
   padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   color: var(--secondary-color-yellow);
@@ -95,4 +99,33 @@
 
 .reviews-dot.active {
   background-color: var(--primary-color-yellow);
+}
+
+.feedback {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.feedback-text {
+  color: var(--secondary-color-grey);
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.feedback-button {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  color: var(--secondary-color-grey);
+  border-radius: 20px;
+  border: 2px solid var(--secondary-color-grey);
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.feedback-button:hover {
+  color: var(--primary-color-white);
+  background-color: var(--secondary-color-grey);
 }
