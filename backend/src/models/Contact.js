@@ -8,11 +8,11 @@ const contactSchema = new mongoose.Schema(
     },
     dogName: {
       type: String,
-      required: true,
+      // required: true,
     },
     phone: {
       type: Number,
-      required: true,
+      // required: true,
     },
     email: {
       type: String,
