@@ -10,7 +10,8 @@ const products = [
     name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb) ',
     price: 136,
     oldPrice: 320,
-    image: '/images/product1.jpg',
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
     category: 'nutrition',
     rating: 4,
     popularity: 15,
@@ -20,7 +21,8 @@ const products = [
     name: 'Dry food for dogs of small breeds Savory 3 kg (lamb) ',
     price: 140,
     oldPrice: 320,
-    image: '/images/product2.jpg',
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
     category: 'nutrition',
     rating: 5,
     popularity: 10,
@@ -30,7 +32,8 @@ const products = [
     name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck) ',
     price: 136,
     oldPrice: 320,
-    image: '/images/product3.jpg',
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
     category: 'nutrition',
     rating: 5,
     popularity: 8,
@@ -40,11 +43,453 @@ const products = [
     name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
     price: 346,
     oldPrice: 450,
-    image: '/images/product4.jpg',
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
     category: 'nutrition',
     rating: 5,
     popularity: 5,
     size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 3,
+    popularity: 8,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 8,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 9,
+    size: 'large',
+  },
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 15,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 3,
+    popularity: 8,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 8,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb) ',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 10,
+    size: 'small',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 8,
+    size: 'all',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 5,
+    size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 8,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 9,
+    size: 'large',
+  },
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 15,
+    size: 'medium',
+  },
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb) ',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 10,
+    size: 'small',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 8,
+    size: 'all',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 5,
+    size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 3,
+    popularity: 8,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 8,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 9,
+    size: 'large',
+  },
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 15,
+    size: 'medium',
+  },
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb) ',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 10,
+    size: 'small',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 8,
+    size: 'all',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 5,
+    size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 3,
+    popularity: 8,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 8,
+    size: 'medium',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 9,
+    size: 'large',
+  },
+  {
+    name: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_xd7hwo.png',
+    category: 'nutrition',
+    rating: 4,
+    popularity: 15,
+    size: 'medium',
+  },
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb) ',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 10,
+    size: 'small',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck) ',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 8,
+    size: 'all',
+  },
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 5,
+    size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 5 kg (rabbit and duck)',
+    price: 346,
+    oldPrice: 450,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 9,
+    size: 'large',
+  },
+
+  {
+    name: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
+    price: 140,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_7_2_tqcbs3.png',
+    category: 'nutrition',
+    rating: 5,
+    popularity: 7,
+    size: 'small',
+  },
+
+  {
+    name: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)',
+    price: 136,
+    oldPrice: 320,
+    image:
+      'https://res.cloudinary.com/dj21215qk/image/upload/v1775412224/image_6_gdebbk.png',
+    category: 'nutrition',
+    rating: 3,
+    popularity: 8,
+    size: 'small',
   },
 ];
 
