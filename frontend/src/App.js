@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CartProvider } from './context/CartContext';
 
 import HomePage from './pages/HomePage/HomePage';
 import NutritionPage from './pages/NutritionPage/NutritionPage';
@@ -10,15 +11,17 @@ import CartPage from './pages/Cart/CartPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/nutrition' element={<NutritionPage />} />
-        <Route path='/cart' element={<CartPage />} />
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-      <ToastContainer />
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/nutrition' element={<NutritionPage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+        <ToastContainer />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

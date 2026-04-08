@@ -1,14 +1,28 @@
 import './NutritionPage.css';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import { getProducts } from '../../api/api';
+import { getProducts, addToCart } from '../../api/api';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { useCart } from '../../context/CartContext';
 
 function NutritionPage() {
   const [activeSort, setActiveSort] = useState('popularity');
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const { fetchCartCount } = useCart();
+
+  const handleAddToCart = async productId => {
+    try {
+      await addToCart(productId);
+      fetchCartCount();
+      toast.success('Product added to cart');
+    } catch (error) {
+      toast.error('Something went wrong!');
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     getProducts({ sortBy: activeSort, page: currentPage, limit: 8 })
@@ -20,6 +34,7 @@ function NutritionPage() {
         console.log(error);
       });
   }, [activeSort, currentPage]);
+
   return (
     <>
       <Header />
@@ -86,7 +101,12 @@ function NutritionPage() {
                     <p className='old-price'>${product.oldPrice}</p>
                   )}
                 </div>
-                <button className='card-button'>Buy</button>
+                <button
+                  className='card-button'
+                  onClick={() => handleAddToCart(product._id)}
+                >
+                  Buy
+                </button>
               </li>
             ))}
           </ul>
