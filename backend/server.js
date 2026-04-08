@@ -17,11 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 const productRoutes = require('./src/routes/productRoutes');
 const reviewRoutes = require('./src/routes/reviewRoutes');
 const contactRoutes = require('./src/routes/contactRoutes');
+const cartRoutes = require('./src/routes/cartRoutes');
 
 // connect routes
 app.use('/api/products', productRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/contacts', contactRoutes);
+app.use('/api/cart', cartRoutes);
 
 // connect MongoDB
 mongoose

@@ -4,9 +4,11 @@ import logo from '../../images/logo.png';
 import cart from '../../images/cart.png';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
+import { useCart } from '../../context/CartContext';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartCount } = useCart();
 
   return (
     <header className='header'>
@@ -32,7 +34,9 @@ function Header() {
           <div className='header-buttons'>
             <Link to='/cart' className='header-button-cart'>
               <img src={cart} alt='cart' />
+              {cartCount > 0 && <span className='cart-count'>{cartCount}</span>}
             </Link>
+
             <button
               className='header-button-contact'
               onClick={() => setIsOpen(true)}
