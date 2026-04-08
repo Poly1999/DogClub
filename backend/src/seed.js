@@ -525,7 +525,7 @@ const seedDB = async () => {
 
     // first we need clear the collections
     await Product.deleteMany();
-    await Review.deleteMany();
+    // await Review.deleteMany();
     console.log('Collections cleared');
 
     // add new
