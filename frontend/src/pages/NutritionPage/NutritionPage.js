@@ -11,7 +11,15 @@ function NutritionPage() {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const [isSortOpen, setIsSortOpen] = useState(false);
   const { fetchCartCount } = useCart();
+  const sortOptions = [
+    { value: 'popularity', label: 'Popularity' },
+    { value: 'cheaper', label: 'Cheaper first' },
+    { value: 'expensive', label: 'More expensive first' },
+    { value: 'name', label: 'By name' },
+    { value: 'newest', label: 'New ones first' },
+  ];
 
   const handleAddToCart = async productId => {
     try {
@@ -45,37 +53,26 @@ function NutritionPage() {
             <h2 className='nut-title'>Nutrition</h2>
             <div className='sort-box'>
               <p className='sort-text'>Sorting:</p>
+              <button
+                type='button'
+                className='sort-mobile-trigger'
+                onClick={() => setIsSortOpen(true)}
+              >
+                <span className='sort-mobile-icon'>⇅</span>
+                {sortOptions.find(option => option.value === activeSort)?.label}
+              </button>
               <div className='button-box'>
-                <button
-                  className={`sort-button ${activeSort === 'popularity' ? 'active' : ''}`}
-                  onClick={() => setActiveSort('popularity')}
-                >
-                  Popularity
-                </button>
-                <button
-                  className={`sort-button ${activeSort === 'cheaper' ? 'active' : ''}`}
-                  onClick={() => setActiveSort('cheaper')}
-                >
-                  Cheaper first
-                </button>
-                <button
-                  className={`sort-button ${activeSort === 'expensive' ? 'active' : ''}`}
-                  onClick={() => setActiveSort('expensive')}
-                >
-                  More expensive first
-                </button>
-                <button
-                  className={`sort-button ${activeSort === 'name' ? 'active' : ''}`}
-                  onClick={() => setActiveSort('name')}
-                >
-                  By name
-                </button>
-                <button
-                  className={`sort-button ${activeSort === 'newest' ? 'active' : ''}`}
-                  onClick={() => setActiveSort('newest')}
-                >
-                  New ones first
-                </button>
+                {sortOptions.map(option => (
+                  <button
+                    key={option.value}
+                    className={`sort-button ${
+                      activeSort === option.value ? 'active' : ''
+                    }`}
+                    onClick={() => setActiveSort(option.value)}
+                  >
+                    {option.label}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
@@ -124,7 +121,9 @@ function NutritionPage() {
               page => (
                 <button
                   key={page}
-                  className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
+                  className={`pagination-btn ${
+                    currentPage === page ? 'active' : ''
+                  }`}
                   onClick={() => setCurrentPage(page)}
                 >
                   {page}
@@ -144,6 +143,36 @@ function NutritionPage() {
           </div>
         </div>
       </main>
+
+      {isSortOpen && (
+        <div className='sort-modal' onClick={() => setIsSortOpen(false)}>
+          <div
+            className='sort-modal-content'
+            onClick={e => e.stopPropagation()}
+          >
+            <h3 className='sort-modal-title'>Sorting</h3>
+            <ul className='sort-modal-list'>
+              {sortOptions.map(option => (
+                <li key={option.value}>
+                  <button
+                    type='button'
+                    className={`sort-modal-option ${
+                      activeSort === option.value ? 'active' : ''
+                    }`}
+                    onClick={() => {
+                      setActiveSort(option.value);
+                      setIsSortOpen(false);
+                    }}
+                  >
+                    <span>{option.label}</span>
+                    <span className='sort-modal-arrow'>›</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>

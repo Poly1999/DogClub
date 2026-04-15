@@ -15,9 +15,10 @@
   position: relative;
   border-radius: 32px;
   width: 800px;
-  height: 800px;
+  max-height: calc(100vh - 40px);
   padding: 85px;
   background-color: var(--secondary-color-biege);
+  overflow-y: auto;
 }
 
 .review-modal-title {
@@ -137,4 +138,50 @@
 
 .review-star.active {
   color: var(--primary-color-yellow);
+}
+
+@media (max-width: 759px) {
+  .review-modal-container {
+    width: min(92vw, 560px);
+    height: auto;
+    padding: 32px;
+  }
+  .review-modal-title {
+    font-size: 36px;
+  }
+  .review-modal-btn {
+    left: auto;
+    right: 24px;
+    top: 24px;
+  }
+  .review-form {
+    gap: 18px;
+  }
+  .review-input,
+  .review-input-label,
+  .form-button {
+    width: 100%;
+  }
+  .review-input-label {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    padding: 22px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1199px) {
+  .review-modal-container {
+    width: min(88vw, 700px);
+    height: auto;
+    padding: 48px;
+  }
+  .review-modal-title {
+    font-size: 48px;
+  }
+  .review-modal-btn {
+    left: auto;
+    right: 34px;
+    top: 34px;
+  }
 }

@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-background {
@@ -13,11 +14,16 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
 }
 
 .hero-left {
-  padding-top: 100px;
-  padding-left: 220px;
+  padding: 100px 0 80px;
+  max-width: 700px;
+  z-index: 2;
 }
 
 .hero-title {
@@ -55,7 +61,13 @@
 }
 
 .hero-right {
-  padding: 150px 50px 60px 0;
+  padding: 110px 0 40px;
+  z-index: 2;
+}
+
+.hero-image {
+  width: min(520px, 42vw);
+  height: auto;
 }
 
 .big-paw-one {
@@ -63,7 +75,7 @@
   width: 140px;
   height: 140px;
   top: -60px;
-  left: 950px;
+  left: 68%;
   transform: rotate(-180deg);
   opacity: 0.1;
 }
@@ -93,7 +105,7 @@
   width: 40px;
   height: 40px;
   top: 200px;
-  left: 1000px;
+  left: 70%;
 }
 
 .yellow-paw {
@@ -101,5 +113,113 @@
   width: 40px;
   height: 40px;
   top: 450px;
-  left: 800px;
+  left: 56%;
+}
+
+@media (min-width: 760px) and (max-width: 1199px) {
+  .hero-container {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .hero-left {
+    padding: 70px 0 60px;
+    max-width: 55%;
+  }
+
+  .hero-title {
+    font-size: 45px;
+    max-width: 400px;
+    margin-bottom: 24px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    max-width: 380px;
+    margin-bottom: 20px;
+  }
+
+  .hero-right {
+    padding: 80px 0 45px;
+  }
+
+  .hero-image {
+    width: min(340px, 38vw);
+  }
+
+  .big-paw-one {
+    left: 62%;
+  }
+
+  .purple-paw {
+    left: 68%;
+  }
+
+  .yellow-paw {
+    left: 53%;
+    top: 350px;
+  }
+}
+
+@media (max-width: 759px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .hero-left {
+    padding: 24px 0 40px;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-weight: 400;
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .hero-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.45;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .hero-button {
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 143px;
+    height: 35px;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-background {
+    height: 330px;
+    margin-top: 0;
+    transform: rotate(180deg);
+  }
+
+  .purple-paw {
+    top: 28px;
+    left: 10px;
+  }
+
+  .yellow-paw {
+    top: 230px;
+    left: auto;
+    right: 12px;
+  }
+
+  .big-paw-one,
+  .big-paw-two,
+  .big-paw-three {
+    display: none;
+  }
 }
