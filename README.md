@@ -10,6 +10,7 @@ Full-stack web application for a dog services brand, including:
 
 ## Table of Contents
 
+- [Live Demo](#live-demo)
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -20,6 +21,10 @@ Full-stack web application for a dog services brand, including:
 - [API Reference](#api-reference)
 - [Available Scripts](#available-scripts)
 - [Deployment Notes](#deployment-notes)
+
+## Live Demo
+
+- Production URL: [https://dogclub.vercel.app](https://dogclub.vercel.app)
 
 ## Overview
 
@@ -93,28 +98,25 @@ dog-club/
 
 ## Screenshots
 
-Add real project screenshots to a `docs/screenshots/` folder and update the paths below.
-
 ### Home / Landing
 
-`![Home page](docs/screenshots/home-desktop.png)`
+`![Home page](docs/screenshots/home-page.jpeg)`
 
 ### Nutrition (Mobile sorting sheet)
 
-`![Nutrition mobile sorting](docs/screenshots/nutrition-mobile-sorting.png)`
+`![Nutrition mobile sorting](docs/screenshots/nutrition-mobile-sorting.jpeg)`
 
 ### Footer (Desktop + Mobile)
 
-`![Footer desktop](docs/screenshots/footer-desktop.png)`
+`![Footer desktop](docs/screenshots/footer-desktop.jpeg)`
 
-`![Footer mobile](docs/screenshots/footer-mobile.png)`
+`![Footer mobile](docs/screenshots/footer-mobile.jpeg)`
 
 ### Contact Form Email Notification (Important)
 
 After a user submits the contact form, the backend sends an email via Nodemailer to `GMAIL_USER`.
 
-Add a screenshot like:
-`![Contact email notification](docs/screenshots/contact-email-notification.png)`
+`![Contact email notification](docs/screenshots/contact-email-notification.jpeg)`
 
 This is useful in portfolio/demo presentations to prove end-to-end form delivery.
 
