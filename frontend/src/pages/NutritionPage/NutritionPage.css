@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 25px 40px;
 }
 
 .nut-title {
@@ -16,6 +18,17 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.sort-mobile-trigger {
+  display: none;
+}
+
+.button-box {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .sort-text {
@@ -31,6 +44,8 @@
   font-size: 16px;
   border: 1px solid var(--secondary-color-grey);
   padding: 8px;
+  background-color: transparent;
+  border-radius: 6px;
 }
 
 .sort-button.active {
@@ -42,21 +57,24 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
   justify-items: center;
 }
 
 .card-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   padding: 20px 16px;
 
   border-radius: 8px;
   max-width: 288px;
-  max-height: 512px;
+  min-height: 512px;
+  height: 100%;
 }
 
 .card-item:hover {
@@ -129,6 +147,7 @@
   border: none;
 
   transition: background-color 0.2s;
+  margin-top: auto;
 }
 
 .card-button:hover {
@@ -141,6 +160,8 @@
   align-items: center;
   gap: 4px;
   margin: 40px 0;
+  padding: 0 16px;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
@@ -190,4 +211,167 @@
   align-items: center;
   font-size: 16px;
   color: var(--secondary-color-grey);
+}
+
+.sort-modal {
+  display: none;
+}
+
+@media (max-width: 759px) {
+  .nut-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 16px;
+    gap: 20px;
+  }
+  .nut-title {
+    font-size: 44px;
+  }
+  .sort-box {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .sort-text {
+    display: none;
+  }
+  .sort-mobile-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background: transparent;
+    color: var(--primary-color-black);
+    font-size: 18px;
+    padding: 0;
+  }
+  .sort-mobile-icon {
+    color: var(--primary-color-yellow);
+    font-size: 24px;
+    line-height: 1;
+  }
+  .button-box {
+    display: none;
+  }
+  .nut-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 16px 30px;
+    align-items: stretch;
+  }
+  .card-item {
+    width: 100%;
+    max-width: none;
+    min-height: 360px;
+    padding: 12px 10px 14px;
+    overflow: hidden;
+  }
+  .card-img {
+    width: 100%;
+    max-width: 130px;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  .card-stars {
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  .stars-vendor {
+    font-size: 12px;
+  }
+  .stars {
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-price {
+    margin-bottom: 14px;
+  }
+  .new-price {
+    font-size: 20px;
+  }
+  .old-price {
+    font-size: 12px;
+  }
+  .card-button {
+    width: 84px;
+    height: 38px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .card-text,
+  .card-price {
+    text-align: center;
+  }
+
+  .sort-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(24, 24, 23, 0.32);
+    z-index: 2000;
+  }
+  .sort-modal-content {
+    width: 100%;
+    background: var(--primary-color-white);
+    border-radius: 28px 28px 0 0;
+    padding: 20px 22px 28px;
+  }
+  .sort-modal-title {
+    text-align: center;
+    color: var(--primary-color-yellow);
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+  .sort-modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sort-modal-option {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .sort-modal-option.active {
+    color: var(--primary-color-yellow);
+    font-weight: 500;
+  }
+  .sort-modal-arrow {
+    color: var(--primary-color-black);
+    font-size: 38px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1199px) {
+  .nut-container {
+    padding: 40px 20px 30px;
+  }
+  .nut-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+  .card-item {
+    max-width: 100%;
+  }
+  .sort-mobile-trigger,
+  .sort-modal {
+    display: none;
+  }
 }

@@ -7,6 +7,17 @@ function Reviews() {
   const [reviews, setReviews] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+
+  const handleTouchStart = e => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = e => {
+    const touchEnd = e.changedTouches[0].clientX;
+    if (touchStart - touchEnd > 50) handleNext();
+    if (touchEnd - touchStart > 50) handlePrev();
+  };
 
   const fetchReviews = () => {
     getReviews()
@@ -42,7 +53,11 @@ function Reviews() {
           <button className='reviews-prev' onClick={handlePrev}>
             ←
           </button>
-          <ul className='reviews-list'>
+          <ul
+            className='reviews-list'
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             {visibleReviews.map(review => (
               <li key={review._id} className='reviews-item'>
                 <img

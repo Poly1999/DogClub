@@ -15,9 +15,10 @@
   position: relative;
   border-radius: 32px;
   width: 800px;
-  height: 800px;
+  max-height: calc(100vh - 40px);
   padding: 85px;
   background-color: var(--secondary-color-biege);
+  overflow-y: auto;
 }
 
 .modal-title {
@@ -46,4 +47,40 @@
   height: 32px;
   left: 730px;
   top: 40px;
+}
+
+@media (max-width: 759px) {
+  .modal-container {
+    width: min(92vw, 560px);
+    height: auto;
+    padding: 32px;
+  }
+  .modal-title {
+    font-size: 36px;
+  }
+  .modal-text {
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+  .close-button {
+    left: auto;
+    right: 24px;
+    top: 24px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1199px) {
+  .modal-container {
+    width: min(88vw, 700px);
+    height: auto;
+    padding: 48px;
+  }
+  .modal-title {
+    font-size: 48px;
+  }
+  .close-button {
+    left: auto;
+    right: 34px;
+    top: 34px;
+  }
 }
