@@ -100,23 +100,23 @@ dog-club/
 
 ### Home / Landing
 
-`![Home page](docs/screenshots/home-page.jpeg)`
+![Home page](docs/screenshots/home-page.jpeg)
 
 ### Nutrition (Mobile sorting sheet)
 
-`![Nutrition mobile sorting](docs/screenshots/nutrition-mobile-sorting.jpeg)`
+![Nutrition mobile sorting](docs/screenshots/nutrition-mobile-sorting.jpeg)
 
 ### Footer (Desktop + Mobile)
 
-`![Footer desktop](docs/screenshots/footer-desktop.jpeg)`
+![Footer desktop](docs/screenshots/footer-desktop.jpeg)
 
-`![Footer mobile](docs/screenshots/footer-mobile.jpeg)`
+![Footer mobile](docs/screenshots/footer-mobile.jpeg)
 
 ### Contact Form Email Notification (Important)
 
 After a user submits the contact form, the backend sends an email via Nodemailer to `GMAIL_USER`.
 
-`![Contact email notification](docs/screenshots/contact-email-notification.jpeg)`
+![Contact email notification](docs/screenshots/contact-email-notification.jpeg)
 
 This is useful in portfolio/demo presentations to prove end-to-end form delivery.
 
